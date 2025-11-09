@@ -5,7 +5,7 @@
 ## 框架组件
 
 1.Node.JS: 运行环境  
-2.Hexo: 用于管理和部署博客--[Hexo参考文档](https://hexo.io/zh-cn/docs/)   
+2.Hexo: 用于管理和部署博客--[Hexo参考文档](https://hexo-next.readthedocs.io/zh-cn/latest/)   
 3.Just:
 用于生成项目级别的快速命令--[Just参考文档](https://github.com/casey/just/blob/master/README.%E4%B8%AD%E6%96%87.md)  
 4.direnv: 用于管理项目级别的环境变量--[direnv参考文档](https://github.com/direnv/direnv)

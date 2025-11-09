@@ -14,8 +14,8 @@ timezone: 'Asia/Shanghai'
 # URL [网址设置]
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project' [在此设置您的网站URL。例如，如果您使用GitHub Page，请将url设置为'https://username.github.io/project']
 url: http://NGshiyu.github.io
-permalink: :year/:month/:day/:title/
-permalink_defaults:
+permalink: :timestamp/:title/
+permalink_defaults: :timestamp/:title/
 pretty_urls:
   trailing_index: false # Set to false to remove trailing 'index.html' from permalinks [设置为false以从永久链接中移除末尾的'index.html']
   trailing_html: false # Set to false to remove trailing '.html' from permalinks [设置为false以从永久链接中移除末尾的'.html']
@@ -46,7 +46,7 @@ future: true
 syntax_highlighter: highlight.js
 highlight:
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace: ''
   wrap: true
   hljs: false
@@ -67,7 +67,20 @@ index_generator:
 # Category & Tag [分类和标签]
 default_category: uncategorized
 category_map:
+  技术分享: tech
+  前端开发: frontend
+  后端开发: backend
+  学习笔记: notes
+  项目实战: projects
+  生活随笔: life
+  博客搭建: blog
+  实战教程: tutorial
 tag_map:
+  Hexo: hexo
+  Blog: blog
+  GitHub Pages: github-pages
+  JavaScript: javascript
+  Vue.js: vue
 
 # Metadata elements [元数据元素]
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta [元数据元素文档]

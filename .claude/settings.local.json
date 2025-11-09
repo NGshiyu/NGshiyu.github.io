@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx hexo:*)",
+      "Bash(just:*)",
+      "Bash(just build:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
