@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 拾瑜
-#subtitle: '小透明的程序人生'
-description: '怕什么真理无穷，进一寸有一寸的欢喜！'
-keywords: [Java,Golang]
+title: 忆秉拾瑜
+subtitle: '不一定信达雅，只在乎积寸进！'
+description: '高楼广厦，始于垒土！'
+keywords:
 author: 拾瑜
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://NGshiyu.github.io/project
+url: http://NGshiyu.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -33,7 +33,7 @@ skip_render:
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
-titlecase: false # Transform title into titlecase
+titlecase: true # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
