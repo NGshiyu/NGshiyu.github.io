@@ -11,10 +11,10 @@
 
 # Allow to cache content generation. [允许缓存内容生成]
 cache:
-  enable: true
+  enable: false
 
 # Remove unnecessary files after hexo generate. [在hexo生成后移除不必要的文件]
-minify: false
+minify: true
 
 # Define custom file paths. [定义自定义文件路径]
 # Create your custom files in site directory `source/_data` and uncomment needed files below. [在网站目录`source/_data`中创建自定义文件，并取消下面所需文件的注释]
@@ -37,17 +37,17 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 # Schemes [方案]
-scheme: Muse
+#scheme: Muse
 #scheme: Mist
 #scheme: Pisces
-#scheme: Gemini
+scheme: Gemini
 
 # Dark Mode [暗色模式]
-darkmode: false
+darkmode: true
 
 # Light-Dark Mode [明暗模式]
 lightdark:
-  enable: false
+  enable: true
   # Add @supports (color: light-dark(red, red)) check [添加@supports (color: light-dark(red, red))检查]
   check_supports: true
 
@@ -102,14 +102,14 @@ open_graph:
 # Value before `||` delimiter is the target link, value after `||` delimiter is the name of Font Awesome icon. [`||`分隔符前的值是目标链接，`||`分隔符后的值是Font Awesome图标的名称]
 # External url should start with http:// or https:// [外部URL应以http://或https://开头]
 menu:
-  #home: / || fa fa-home
-  #about: /about/ || fa fa-user
-  #tags: /tags/ || fa fa-tags
-  #categories: /categories/ || fa fa-th
-  #archives: /archives/ || fa fa-archive
-  #schedule: /schedule/ || fa fa-calendar
-  #sitemap: /sitemap.xml || fa fa-sitemap
-  #commonweal: /404/ || fa fa-heartbeat
+  home: / || fa fa-home
+  about: /about/ || fa fa-user
+  tags: /tags/ || fa fa-tags
+  categories: /categories/ || fa fa-th
+  archives: /archives/ || fa fa-archive
+#  schedule: /schedule/ || fa fa-calendar
+#  sitemap: /sitemap.xml || fa fa-sitemap
+#  commonweal: /404/ || fa fa-heartbeat
 
 # Enable / Disable menu icons / item badges. [启用/禁用菜单图标/项目徽章]
 menu_settings:
@@ -163,10 +163,10 @@ site_state: true
 # Key is the link label showing to end users. [Key是显示给最终用户的链接标签]
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon. [`||`分隔符前的值是目标永久链接，`||`分隔符后的值是Font Awesome图标的名称]
 social:
-  #GitHub: https://github.com/yourname || fab fa-github
-  #E-Mail: mailto:yourname@gmail.com || fa fa-envelope
+  GitHub: https://github.com/NGshiyu || fab fa-github
+  E-Mail: mailto:codedog39@163.com || fa fa-envelope
   #Weibo: https://weibo.com/yourname || fab fa-weibo
-  #Twitter: https://twitter.com/yourname || fab fa-twitter
+  Twitter: https://twitter.com/NG_shiyu || fab fa-twitter
   #FB Page: https://www.facebook.com/yourname || fab fa-facebook
   #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow
   #YouTube: https://youtube.com/yourname || fab fa-youtube
@@ -175,8 +175,8 @@ social:
 
 social_icons:
   enable: true
-  icons_only: false
-  transition: false
+  icons_only: true
+  transition: true
 
 # Blog rolls [博客链接]
 links_settings:
@@ -207,18 +207,17 @@ toc:
 # ---------------------------------------------------------------
 
 # Show multilingual switcher in footer. [在页脚显示多语言切换器]
-language_switcher: false
+language_switcher: true
 
 footer:
   # Specify the year when the site was setup. If not defined, current year will be used. [指定网站建立年份。如果未定义，将使用当前年份]
-  #since: 2021
-
+  since: 2025
   # Icon between year and copyright info. [年份和版权信息之间的图标]
   icon:
     # Icon name in Font Awesome. See: https://fontawesome.com/icons [Font Awesome中的图标名称。参见：https://fontawesome.com/icons]
     name: fa fa-heart
     # If you want to animate the icon, set it to true. [如果您想为图标添加动画，请设置为true]
-    animated: false
+    animated: true
     # Change the color of icon, using Hex Code. [使用十六进制代码更改图标颜色]
     color: "#ff0000"
 
@@ -227,7 +226,7 @@ footer:
   copyright:
 
   # Powered by Hexo & NexT [由Hexo & NexT驱动]
-  powered: true
+  powered: false
 
   # Beian ICP and gongan information for Chinese users. See: https://beian.miit.gov.cn, https://beian.mps.gov.cn [中国用户的备案ICP和公安信息。参见：https://beian.miit.gov.cn, https://beian.mps.gov.cn]
   beian:
@@ -287,8 +286,8 @@ reward:
 # Subscribe through Telegram Channel, Twitter, etc. [通过Telegram频道、Twitter等订阅]
 # Usage: `Key: permalink || icon` (Font Awesome) [用法：`Key: permalink || icon` (Font Awesome)]
 follow_me:
-  #Twitter: https://twitter.com/username || fab fa-twitter
-  #Telegram: https://t.me/channel_name || fab fa-telegram
+#  Twitter: https://twitter.com/NG_shiyu || fab fa-twitter
+#  Telegram: https://t.me/channel_name || fab fa-telegram
   #WeChat: /images/wechat_channel.png || fab fa-weixin
   #RSS: /atom.xml || fa fa-rss
 
@@ -296,7 +295,7 @@ follow_me:
 # Dependencies: https://github.com/next-theme/hexo-posts-embedding [依赖：https://github.com/next-theme/hexo-posts-embedding]
 # Or: https://github.com/sergeyzwezdin/hexo-related-posts [或：https://github.com/sergeyzwezdin/hexo-related-posts]
 related_posts:
-  enable: false
+  enable: true
   icon: fa fa-signs-post
 
 # Post edit [文章编辑]
@@ -354,7 +353,7 @@ text_align:
   mobile: justify
 
 # Reduce padding / margin indents on devices with narrow width. [在窄宽度设备上减少内边距/外边距缩进]
-mobile_layout_economy: false
+mobile_layout_economy: true
 
 # Browser header panel color. [浏览器标题栏颜色]
 theme_color:
@@ -379,28 +378,28 @@ codeblock:
     dark: prism-dark
   # Add copy button on codeblock [在代码块上添加复制按钮]
   copy_button:
-    enable: false
+    enable: true
     # Available values: default | flat | mac [可用值：default | flat | mac]
-    style:
+    style: mac
   # Fold code block [折叠代码块]
   fold:
-    enable: false
+    enable: true
     height: 500
   # Display language name [显示语言名称]
-  language: false
+  language: true
 
 back2top:
   enable: true
   # Back to top in sidebar. [侧边栏中的返回顶部]
-  sidebar: false
+  sidebar: true
   # Scroll percent label in b2t button. [返回顶部按钮中的滚动百分比标签]
-  scrollpercent: false
+  scrollpercent: true
 
 # Reading progress bar [阅读进度条]
 reading_progress:
-  enable: false
+  enable: true
   # Available values: left | right [可用值：left | right]
-  start_at: left
+  start_at: right
   # Available values: top | bottom [可用值：top | bottom]
   position: top
   reversed: false
@@ -409,7 +408,7 @@ reading_progress:
 
 # Bookmark Support [书签支持]
 bookmark:
-  enable: false
+  enable: true
   # Customize the color of the bookmark. [自定义书签的颜色]
   color: "#222"
   # If auto, save the reading progress when closing the page or clicking the bookmark-icon. [如果为auto，在关闭页面或点击书签图标时保存阅读进度]
@@ -418,8 +417,8 @@ bookmark:
 
 # `Follow me on GitHub` banner in the top-right corner. [右上角的`在GitHub上关注我`横幅]
 github_banner:
-  enable: false
-  permalink: https://github.com/yourname
+  enable: true
+  permalink: https://github.com/NGshiyu
 
 
 # ---------------------------------------------------------------
@@ -484,7 +483,7 @@ font:
 index_with_subtitle: false
 
 # Automatically add external URL with Base64 encrypt & decrypt. [自动使用Base64加密和解密添加外部URL]
-exturl: false
+exturl: true
 # If true, an icon will be attached to each external URL [如果为true，将为每个外部URL附加一个图标]
 exturl_icon: true
 
@@ -536,13 +535,13 @@ tabs:
 # So, you have to install the dependency of pdf.js if you want to use pdf tag and make it available to all browsers. [因此，如果您想使用pdf标签并使其在所有浏览器中可用，必须安装pdf.js的依赖项]
 # Dependencies: https://github.com/next-theme/theme-next-pdf [依赖：https://github.com/next-theme/theme-next-pdf]
 pdf:
-  enable: false
+  enable: true
   # Default height [默认高度]
   height: 500px
 
 # Mermaid tag [Mermaid标签]
 mermaid:
-  enable: false
+  enable: true
   # Available themes: default | dark | forest | neutral [可用主题：default | dark | forest | neutral]
   theme:
     light: default
@@ -550,7 +549,7 @@ mermaid:
 
 # WaveDrom tag [WaveDrom标签]
 wavedrom:
-  enable: false
+  enable: true
 
 # ---------------------------------------------------------------
 # Third Party Plugins & Services Settings [第三方插件和服务设置]
@@ -602,23 +601,23 @@ mediumzoom: false
 
 # Vanilla JavaScript plugin for lazyloading images. [用于延迟加载图像的Vanilla JavaScript插件]
 # For more information: https://apoorv.pro/lozad.js/demo/ [更多信息：https://apoorv.pro/lozad.js/demo/]
-lazyload: false
+lazyload: true
 
 # Automatically insert whitespace between CJK and half-width characters. [自动在中日韩和半角字符之间插入空格]
 # For more information: https://github.com/vinta/pangu.js [更多信息：https://github.com/vinta/pangu.js]
 # Server-side plugin: https://github.com/next-theme/hexo-pangu [服务器端插件：https://github.com/next-theme/hexo-pangu]
-pangu: false
+pangu: true
 
 # Prefetch links based on what is in the user's viewport. [根据用户视口中的内容预取链接]
 # For more information: https://getquick.link [更多信息：https://getquick.link]
 # Front-matter variable (nonsupport home archive). [Front-matter变量（不支持首页归档）]
 quicklink:
-  enable: false
+  enable: true
 
   # Home page and archive page can be controlled through home and archive options below. [首页和归档页面可以通过下面的home和archive选项控制]
   # This configuration item is independent of `enable`. [此配置项独立于`enable`]
-  home: false
-  archive: false
+  home: true
+  archive: true
 
   # Default (true) will initialize quicklink after the load event fires. [默认（true）将在加载事件触发后初始化quicklink]
   delay: true
@@ -636,7 +635,7 @@ quicklink:
 # For more information: https://animate.style [更多信息：https://animate.style]
 motion:
   enable: true
-  async: false
+  async: true
   duration: 200
   transition:
     # All available transition variants: https://theme-next.js.org/animate/ [所有可用的过渡变体：https://theme-next.js.org/animate/]
@@ -651,19 +650,19 @@ motion:
 # Progress bar in the top during page loading. [页面加载期间顶部的进度条]
 # For more information: https://github.com/CodeByZach/pace [更多信息：https://github.com/CodeByZach/pace]
 pace:
-  enable: false
+  enable: true
   # All available colors: [所有可用颜色：]
   # black | blue | green | orange | pink | purple | red | silver | white | yellow
   color: blue
   # All available themes: [所有可用主题：]
   # big-counter | bounce | barber-shop | center-atom | center-circle | center-radar | center-simple
   # corner-indicator | fill-left | flat-top | flash | loading-bar | mac-osx | material | minimal
-  theme: minimal
+  theme: barber-shop
 
 # Generate a ribbon in your website with HTML5 canvas. [使用HTML5 canvas在您的网站中生成一个彩带]
 # For more information: https://github.com/hustcc/ribbon.js [更多信息：https://github.com/hustcc/ribbon.js]
 canvas_ribbon:
-  enable: false
+  enable: true
   size: 300 # The width of the ribbon [彩带的宽度]
   alpha: 0.6 # The transparency of the ribbon [彩带的透明度]
   zIndex: -1 # The display level of the ribbon [彩带的显示级别]
@@ -822,7 +821,7 @@ firestore:
 # Show Views / Visitors of the website / page with busuanzi. [使用busuanzi显示网站/页面的浏览量/访问者数量]
 # For more information: http://ibruce.info/2015/04/04/busuanzi/ [更多信息：http://ibruce.info/2015/04/04/busuanzi/]
 busuanzi_count:
-  enable: false
+  enable: true
   total_visitors: true
   total_visitors_icon: fa fa-user
   total_views: true
@@ -846,13 +845,13 @@ algolia_search:
 # Local Search
 # Dependencies: https://github.com/next-theme/hexo-generator-searchdb [依赖：https://github.com/next-theme/hexo-generator-searchdb]
 local_search:
-  enable: false
+  enable: true
   # Show top n results per article, show all results by setting to -1 [每篇文章显示前n个结果，设置为-1显示所有结果]
-  top_n_per_article: 1
+  top_n_per_article: -1
   # Unescape html strings to the readable one. [将html字符串转换为可读格式]
-  unescape: false
+  unescape: true
   # Preload the search data when the page loads. [页面加载时预加载搜索数据]
-  preload: false
+  preload: true
 
 
 # ---------------------------------------------------------------
