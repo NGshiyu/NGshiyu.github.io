@@ -10,4 +10,4 @@ server:
 run:
   npx hexo server
 all:
-  npx hexo clean && npx hexo generate && npx hexo server
+  npx hexo clean && npx hexo generate

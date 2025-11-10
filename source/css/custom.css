@@ -10,13 +10,6 @@ body {
   transition: all 0.3s ease;
 }
 
-/* 鼠标悬停时的发光效果 */
-.post-body:hover,
-.sidebar:hover,
-.header:hover {
-  box-shadow: 0 0 20px rgba(52, 152, 219, 0.3);
-  transition: box-shadow 0.3s ease;
-}
 
 /* 自定义滚动条样式 */
 ::-webkit-scrollbar {

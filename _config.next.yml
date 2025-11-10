@@ -344,7 +344,7 @@ calendar:
 
 # Preload styles and preconnect CDN for fonts and plugins. # [预加载样式并为字体和插件预连接CDN]
 # For more information: https://www.w3.org/TR/resource-hints/#preconnect # [更多信息：https://www.w3.org/TR/resource-hints/#preconnect]
-preconnect: false
+preconnect: true
 
 # Set the text alignment in posts / pages. # [设置文章/页面中的文本对齐方式]
 text_align:
