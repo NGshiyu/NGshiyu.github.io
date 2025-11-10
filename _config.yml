@@ -66,21 +66,21 @@ index_generator:
 
 # Category & Tag # [分类和标签]
 default_category: uncategorized
-category_map:
-  技术分享: tech
-  前端开发: frontend
-  后端开发: backend
-  学习笔记: notes
-  项目实战: projects
-  生活随笔: life
-  博客搭建: blog
-  实战教程: tutorial
-tag_map:
-  Hexo: hexo
-  Blog: blog
-  GitHub Pages: github-pages
-  JavaScript: javascript
-  Vue.js: vue
+#category_map:
+#  技术分享: tech
+#  前端开发: frontend
+#  后端开发: backend
+#  学习笔记: notes
+#  项目实战: projects
+#  生活随笔: life
+#  博客搭建: blog
+#  实战教程: tutorial
+#tag_map:
+#  Hexo: hexo
+#  Blog: blog
+#  GitHub Pages: github-pages
+#  JavaScript: javascript
+#  Vue.js: vue
 
 # Metadata elements # [元数据元素]
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta # [元数据元素文档]
