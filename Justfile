@@ -5,9 +5,9 @@ build:
   npx hexo generate
 clean:
   npx hexo clean
-deploy:
-  npx hexo deploy
 server:
   npx hexo server
 run:
   npx hexo server
+all:
+  npx hexo clean && npx hexo generate && npx hexo server

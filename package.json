@@ -14,16 +14,26 @@
   "dependencies": {
     "hexo": "^8.0.0",
     "hexo-deployer-git": "^4.0.0",
+    "hexo-filter-mathjax": "^0.9.1",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^4.0.0",
+    "hexo-generator-searchdb": "^1.5.0",
     "hexo-generator-tag": "^2.0.0",
+    "hexo-next-exif": "github:next-theme/hexo-next-exif",
+    "hexo-next-fireworks": "github:next-theme/hexo-next-fireworks",
+    "hexo-next-giscus": "^1.3.0",
+    "hexo-next-three": "github:next-theme/hexo-next-three",
+    "hexo-next-valine": "github:next-theme/hexo-next-valine",
+    "hexo-optimize": "^3.4.0",
+    "hexo-pangu": "^0.4.1",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-marked": "^7.0.0",
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^1.0.0",
     "hexo-theme-next": "^8.26.0",
+    "hexo-word-counter": "^0.2.1",
     "micromatch": "^4.0.8"
   }
 }
