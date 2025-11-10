@@ -8,4 +8,5 @@ public/
 _multiconfig.yml
 .idea
 .claude
+/.claude/
 CLAUDE.md
