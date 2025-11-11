@@ -19,7 +19,7 @@ minify: true
 # Define custom file paths. # [定义自定义文件路径]
 # Create your custom files in site directory `source/_data` and uncomment needed files below. # [在网站目录`source/_data`中创建自定义文件，并取消下面所需文件的注释]
 custom_file_path:
-  head: source/_data/head.njk
+ #head: source/_data/head.njk
  #header: source/_data/header.njk
  #sidebar: source/_data/sidebar.njk
  #postMeta: source/_data/post-meta.njk
@@ -107,9 +107,10 @@ menu:
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
+  RSS: /atom.xml || fa fa-rss
 #  schedule: /schedule/ || fa fa-calendar
 #  sitemap: /sitemap.xml || fa fa-sitemap
-#  commonweal: /404/ || fa fa-heartbeat
+  commonweal: /404/ || fa fa-heartbeat
 
 # Enable / Disable menu icons / item badges. # [启用/禁用菜单图标/项目徽章]
 menu_settings:
@@ -194,9 +195,9 @@ toc:
  # Automatically add list number to toc. # [自动为目录添加列表编号]
   number: true
  # If true, all words will placed on next lines if header width longer then sidebar width. # [如果为true，当标题宽度超过侧边栏宽度时，所有单词将放置在下一行]
-  wrap: false
+  wrap: true
  # If true, all level of TOC in a post will be displayed, rather than the activated part of it. # [如果为true，将显示文章中所有级别的目录，而不是仅显示激活的部分]
-  expand_all: false
+  expand_all: true
  # Maximum heading depth of generated toc. # [生成的目录的最大标题深度]
   max_depth: 6
 
@@ -286,10 +287,10 @@ reward:
 # Subscribe through Telegram Channel, Twitter, etc. # [通过Telegram频道、Twitter等订阅]
 # Usage: `Key: permalink || icon` (Font Awesome) # [用法：`Key: permalink || icon` (Font Awesome)]
 follow_me:
-#  Twitter: https://twitter.com/NG_shiyu || fab fa-twitter
+  Twitter: https://twitter.com/NG_shiyu || fab fa-twitter
 #  Telegram: https://t.me/channel_name || fab fa-telegram
  #WeChat: /images/wechat_channel.png || fab fa-weixin
- #RSS: /atom.xml || fa fa-rss
+  RSS: /atom.xml || fa fa-rss
 
 # Related popular posts # [相关热门文章]
 # Dependencies: https://github.com/next-theme/hexo-posts-embedding # [依赖：https://github.com/next-theme/hexo-posts-embedding]
@@ -317,8 +318,8 @@ post_navigation: left
 
 # TagCloud settings for tags page. # [标签页面的标签云设置]
 tagcloud:
-  min: 12 # Minimum font size in px # [最小字体大小，单位：像素]
-  max: 30 # Maximum font size in px # [最大字体大小，单位：像素]
+  min: 20 # Minimum font size in px # [最小字体大小，单位：像素]
+  max: 40 # Maximum font size in px # [最大字体大小，单位：像素]
   amount: 200 # Total amount of tags # [标签总数]
   orderby: name # Order of tags # [标签排序方式]
   order: 1 # Sort order # [排序顺序]
@@ -680,18 +681,18 @@ comments:
   style: tabs
  # Choose a comment system to be displayed by default. # [选择默认显示的评论系统]
  # Available values: disqus | disqusjs | livere | gitalk | utterances | isso # [可用值：disqus | disqusjs | livere | gitalk | utterances | isso]
-  active:
+  active: gitalk
  # Setting `true` means remembering the comment system selected by the visitor. # [设置为`true`意味着记住访客选择的评论系统]
   storage: true
  # Lazyload all comment systems. # [延迟加载所有评论系统]
-  lazyload: false
+  lazyload: true
  # Modify texts or order for any naves, here are some examples. # [修改任何导航的文本或顺序，这里是一些示例]
   nav:
    #disqus:
    #  text: Load Disqus # [加载Disqus]
    #  order: -1
-   #gitalk:
-   #  order: -2
+   gitalk:
+     order: -1
 
 # Disqus
 # For more information: https://disqus.com # [更多信息：https://disqus.com]
@@ -725,13 +726,17 @@ gitalk:
   client_id: # GitHub Application Client ID # [GitHub应用程序客户端ID]
   client_secret: # GitHub Application Client Secret # [GitHub应用程序客户端密钥]
   admin_user: # GitHub repo owner and collaborators, only these guys can initialize gitHub issues # [GitHub仓库所有者和协作者，只有这些人可以初始化GitHub问题]
+  enable: true  # 请在本地或 CI/CD 中启用
+  github_id: NGshiyu # GitHub repo owner # [GitHub仓库所有者]
+  repo: NGshiyu.github.io # Repository name to store issues # [存储问题的仓库名称]
+  admin_user: 拾瑜 # GitHub repo owner and collaborators, only these guys can initialize gitHub issues # [GitHub仓库所有者和协作者，只有这些人可以初始化GitHub问题]
   distraction_free_mode: true # Facebook-like distraction free mode # [类似Facebook的无干扰模式]
  # When the official proxy is not available, you can change it to your own proxy address # [当官方代理不可用时，您可以将其更改为自己的代理地址]
   proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token # This is official proxy address # [这是官方代理地址]
  # Gitalk's display language depends on user's browser or system environment # [Gitalk的显示语言取决于用户的浏览器或系统环境]
  # If you want everyone visiting your site to see a uniform language, you can set a force language value # [如果您希望访问您网站的每个人都看到统一的语言，可以设置强制语言值]
  # Available values: en | es-ES | fr | ru | zh-CN | zh-TW # [可用值：en | es-ES | fr | ru | zh-CN | zh-TW]
-  language:
+#  language: zh-CN
 
 # Utterances
 # For more information: https://utteranc.es # [更多信息：https://utteranc.es]
