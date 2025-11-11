@@ -10,3 +10,17 @@ _multiconfig.yml
 .claude
 /.claude/
 CLAUDE.md
+
+# 环境变量和敏感配置文件
+.env
+.env.local
+.env.production
+.env.development
+*.key
+*.pem
+config/private.*
+
+# 本地配置文件（包含真实凭据）
+_config.next.local.yml
+_config.local.yml
+**/config.private.*

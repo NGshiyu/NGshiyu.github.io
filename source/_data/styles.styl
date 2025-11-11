@@ -29,3 +29,30 @@ body
 
 ::-webkit-scrollbar-thumb:hover
   background linear-gradient(45deg, #2980b9, #8e44ad)
+
+// 中文段落首行缩进
+.post-body p,
+.post-detail p,
+.post-content p
+  text-indent 2em
+  margin 0
+  padding 0
+
+// 段落间距调整 - 移除段落间的空行间隔
+.post-body p + p,
+.post-detail p + p,
+.post-content p + p
+  margin-top 0
+
+// 针对列表、引用等特殊元素取消缩进
+.post-body ul li,
+.post-body ol li,
+.post-body blockquote p,
+.post-detail ul li,
+.post-detail ol li,
+.post-detail blockquote p
+  text-indent 0
+
+// 标题不缩进
+.post-body h1, .post-body h2, .post-body h3, .post-body h4, .post-body h5, .post-body h6
+  text-indent 0
