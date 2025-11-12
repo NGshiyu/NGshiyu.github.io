@@ -722,7 +722,7 @@ livere_uid: # <your_uid>
 gitalk:
   enable: true  # 请在本地或 CI/CD 中启用
   github_id: NGshiyu # GitHub repo owner # [GitHub仓库所有者]
-  repo: 'NGshiyu.github.io' # Repository name to store issues # [存储问题的仓库名称]
+  repo: NGshiyu.github.io # Repository name to store issues # [存储问题的仓库名称]
   # 请填入你的 GitHub Application Client ID # [GitHub应用程序客户端ID]
   client_id: ${GITALK_GITHUB_CLIENT_ID}
   # 请填入你的 GitHub Application Client Secret # [GitHub应用程序客户端密钥]
