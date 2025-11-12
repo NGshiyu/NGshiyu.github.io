@@ -30,10 +30,7 @@ jobs:
   # Build job ------------------ 构建任务 ------------------
   build:
     runs-on: ubuntu-latest  # 使用最新 Ubuntu 环境
-    # 注入环境变量
-    env:
-      GITALK_GITHUB_CLIENT_ID: ${{ secrets.GITALK_GITHUB_CLIENT_ID }}
-      GITALK_GITHUB_CLIENT_SECRET: ${{ secrets.GITALK_GITHUB_CLIENT_SECRET }}
+
     steps:
       # 拉取仓库代码（包含子模块）
       - name: Checkout
@@ -68,6 +65,10 @@ jobs:
           echo "开始替换 _config.next.yml 中的环境变量..."
           envsubst < _config.next.yml > _config.next.resolved.yml
           cp _config.next.resolved.yml _config.next.yml
+        # 注入环境变量
+        env:
+          GITALK_GITHUB_CLIENT_ID: ${{ secrets.GITALK_GITHUB_CLIENT_ID }}
+          GITALK_GITHUB_CLIENT_SECRET: ${{ secrets.GITALK_GITHUB_CLIENT_SECRET }}
 
       # 使用 Hexo 生成静态文件，加载替换后的配置文件
       - name: Build with Hexo
