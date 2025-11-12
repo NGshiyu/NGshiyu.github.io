@@ -729,12 +729,14 @@ gitalk:
   client_secret: ${GITALK_GITHUB_CLIENT_SECRET}
   admin_user: ['NGshiyu'] # GitHub repo owner and collaborators, only these guys can initialize gitHub issues # [GitHub仓库所有者和协作者，只有这些人可以初始化GitHub问题]
   distraction_free_mode: true # Facebook-like distraction free mode # [类似Facebook的无干扰模式]
+  redirect_uri: https://ngshiyu.github.io/
  # When the official proxy is not available, you can change it to your own proxy address # [当官方代理不可用时，您可以将其更改为自己的代理地址]
   proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token # This is official proxy address # [这是官方代理地址]
  # Gitalk's display language depends on user's browser or system environment # [Gitalk的显示语言取决于用户的浏览器或系统环境]
  # If you want everyone visiting your site to see a uniform language, you can set a force language value # [如果您希望访问您网站的每个人都看到统一的语言，可以设置强制语言值]
  # Available values: en | es-ES | fr | ru | zh-CN | zh-TW # [可用值：en | es-ES | fr | ru | zh-CN | zh-TW]
 #  language: zh-CN
+
 
 # Utterances
 # For more information: https://utteranc.es # [更多信息：https://utteranc.es]
