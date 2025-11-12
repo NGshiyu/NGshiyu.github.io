@@ -14,8 +14,8 @@ timezone: 'Asia/Shanghai'
 # URL # [网址设置]
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project' # [在此设置您的网站URL。例如，如果您使用GitHub Page，请将url设置为'https://username.github.io/project']
 url: http://NGshiyu.github.io
-permalink: :timestamp/:title/
-permalink_defaults: :timestamp/:title/
+permalink: :hash/
+permalink_defaults: :hash/
 pretty_urls:
   trailing_index: false # Set to false to remove trailing 'index.html' from permalinks # [设置为false以从永久链接中移除末尾的'index.html']
   trailing_html: false # Set to false to remove trailing '.html' from permalinks # [设置为false以从永久链接中移除末尾的'.html']
