@@ -302,9 +302,10 @@ related_posts:
 # Post edit # [文章编辑]
 # Easily browse and edit blog source code online. # [轻松在线浏览和编辑博客源代码]
 post_edit:
-  enable: false
-  url: https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name/ # Link for view source # [查看源代码的链接]
- #url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/ # Link for fork & edit # [Fork和编辑的链接]
+  enable: true
+#  url: https://github.com/NGshiyu/NGshiyu.github.io/tree/main/source/ # Link for view source # [查看源代码的链接]
+  url: https://github.com/NGshiyu/NGshiyu.github.io/edit/main/source/ # Link for view source # [查看源代码的链接]
+#  url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/ # Link for fork & edit # [Fork和编辑的链接]
 
 # Show previous post and next post in post footer if exists # [如果存在，在文章页脚显示上一篇文章和下一篇文章]
 # Available values: left | right | false # [可用值：left | right | false]
