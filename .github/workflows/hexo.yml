@@ -30,6 +30,10 @@ jobs:
   # Build job ------------------ 构建任务 ------------------
   build:
     runs-on: ubuntu-latest  # 使用最新 Ubuntu 环境
+    # 注入环境变量
+    env:
+      GITALK_GITHUB_CLIENT_ID: ${{ secrets.GITALK_GITHUB_CLIENT_ID }}
+      GITALK_GITHUB_CLIENT_SECRET: ${{ secrets.GITALK_GITHUB_CLIENT_SECRET }}
     steps:
       # 拉取仓库代码（包含子模块）
       - name: Checkout
@@ -42,6 +46,10 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
+      # 安装envsubst
+      - name: Install envsubst
+        run: sudo apt-get update && sudo apt-get install -y gettext-base
+
       # 安装 Node.js 环境（用于执行 Hexo 命令）
       - name: Use Node.js 24.x
         uses: actions/setup-node@v4
@@ -50,7 +58,7 @@ jobs:
 
       # 安装 Hexo 及依赖
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
 
       # ✳️ 替换 _config.next.yml 文件中的占位符变量
       # 此步骤会将 ${VAR_NAME} 替换为仓库 Secrets 中的真实值
@@ -60,14 +68,6 @@ jobs:
           echo "开始替换 _config.next.yml 中的环境变量..."
           envsubst < _config.next.yml > _config.next.resolved.yml
           cp _config.next.resolved.yml _config.next.yml
-#          grep "client_id:" _config.next.resolved.yml | awk '{print length, $0}'
-#          grep "client_secret:" _config.next.resolved.yml | awk '{print length, $0}'
-        env:
-          GITALK_GITHUB_CLIENT_ID: ${{ secrets.GITALK_GITHUB_CLIENT_ID }}
-          GITALK_GITHUB_CLIENT_SECRET: ${{ secrets.GITALK_GITHUB_CLIENT_SECRET }}
-          # 若有更多密钥，可继续添加：
-          # VALINE_APP_ID: ${{ secrets.VALINE_APP_ID }}
-          # VALINE_APP_KEY: ${{ secrets.VALINE_APP_KEY }}
 
       # 使用 Hexo 生成静态文件，加载替换后的配置文件
       - name: Build with Hexo
