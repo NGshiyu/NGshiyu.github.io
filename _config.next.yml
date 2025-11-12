@@ -722,12 +722,12 @@ livere_uid: # <your_uid>
 gitalk:
   enable: true  # 请在本地或 CI/CD 中启用
   github_id: NGshiyu # GitHub repo owner # [GitHub仓库所有者]
-  repo: NGshiyu.github.io # Repository name to store issues # [存储问题的仓库名称]
+  repo: 'NGshiyu.github.io' # Repository name to store issues # [存储问题的仓库名称]
   # 请填入你的 GitHub Application Client ID # [GitHub应用程序客户端ID]
   client_id: ${GITALK_GITHUB_CLIENT_ID}
   # 请填入你的 GitHub Application Client Secret # [GitHub应用程序客户端密钥]
   client_secret: ${GITALK_GITHUB_CLIENT_SECRET}
-  admin_user: NGshiyu # GitHub repo owner and collaborators, only these guys can initialize gitHub issues # [GitHub仓库所有者和协作者，只有这些人可以初始化GitHub问题]
+  admin_user: ['NGshiyu'] # GitHub repo owner and collaborators, only these guys can initialize gitHub issues # [GitHub仓库所有者和协作者，只有这些人可以初始化GitHub问题]
   distraction_free_mode: true # Facebook-like distraction free mode # [类似Facebook的无干扰模式]
  # When the official proxy is not available, you can change it to your own proxy address # [当官方代理不可用时，您可以将其更改为自己的代理地址]
   proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token # This is official proxy address # [这是官方代理地址]
