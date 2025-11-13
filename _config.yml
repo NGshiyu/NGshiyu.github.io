@@ -55,6 +55,15 @@ prismjs:
   line_number: true
   tab_replace: ''
 
+# Markdown配置
+marked:
+  gfm: true              # 启用GitHub风格的Markdown支持
+  breaks: false          # 设置为false，避免手动换行造成的格式问题
+  pedantic: false        # 不严格遵循原始markdown规范，更加宽松
+  sanitize: false        # 不过滤HTML标签，允许自定义HTML
+  smartLists: true       # 智能处理列表格式
+  smartypants: true      # 智能处理标点符号，如转换引号为智能引号
+
 # Home page setting # [首页设置]
 # path: Root path for your blogs index page. (default = '') # [路径：博客索引页面的根路径（默认 = ''）]
 # per_page: Posts displayed per page. (0 = disable pagination) # [每页显示的文章数（0 = 禁用分页）]

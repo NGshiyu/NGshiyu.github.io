@@ -269,7 +269,7 @@ symbols_count_time:
   item_text_total: false
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post # [使用图标而不是符号#来指示文章底部的标签]
-tag_icon: false
+tag_icon: true
 
 # Donate (Sponsor) settings # [捐赠（赞助）设置]
 # Front-matter variable (nonsupport animation). # [Front-matter变量（不支持动画）]
