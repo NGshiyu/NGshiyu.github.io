@@ -8,8 +8,13 @@ subtitle: '不一定信达雅，只在乎积寸进！'
 description: '高楼广厦，始于垒土！'
 keywords:
 author: 拾瑜
-language: zh-CN
+language: [ zh-CN,en ]
+#language: zh-CN
 timezone: 'Asia/Shanghai'
+# hexo-generator-i18n [https://github.com/Jamling/hexo-generator-i18n]
+i18n:
+  type: [ page, post ]
+  generator: [ archive, category, tag, index ]
 
 # URL # [网址设置]
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project' # [在此设置您的网站URL。例如，如果您使用GitHub Page，请将url设置为'https://username.github.io/project']
@@ -143,13 +148,13 @@ three:
   enable: true
   # CDN must use ESM version. # [CDN必须使用ESM版本]
   # e.g. https://cdn.jsdelivr.net/npm/three@latest/build/three.module.min.js # [例如：https://cdn.jsdelivr.net/npm/three@latest/build/three.module.min.js]
-#  cdn:
+  #  cdn:
   waves:
     enable: true
-#    cdn: https://cdn.jsdelivr.net/npm/three@latest/build/three.module.min.js
+  #    cdn: https://cdn.jsdelivr.net/npm/three@latest/build/three.module.min.js
   lines:
     enable: false
-#    cdn: https://cdn.jsdelivr.net/npm/three@latest/build/three.module.min.js
+  #    cdn: https://cdn.jsdelivr.net/npm/three@latest/build/three.module.min.js
   sphere:
     enable: true
 #    cdn: https://cdn.jsdelivr.net/npm/three@latest/build/three.module.min.js
@@ -211,8 +216,8 @@ mathjax:
   append_css: true # add CSS to pages rendered by MathJax # [向MathJax渲染的页面添加CSS]
   every_page: false # if true, every page will be rendered by MathJax regardless the `mathjax` setting in Front-matter # [如果为true，每个页面都将被MathJax渲染，不管Front-matter中的`mathjax`设置]
   packages: # extra packages to load # [要加载的额外包]
-  extension_options: {}
-    # you can put your extension options here # [您可以在此放置扩展选项]
+  extension_options: { }
+  # you can put your extension options here # [您可以在此放置扩展选项]
   # see http://docs.mathjax.org/en/latest/options/input/tex.html#tex-extension-options for more detail # [详见http://docs.mathjax.org/en/latest/options/input/tex.html#tex-extension-options]
 
 # Word Counter [https://github.com/next-theme/hexo-word-counter]
@@ -257,7 +262,7 @@ filter_optimize:
   # lower means it will be executed first, default of Hexo is 10 # [设置此插件的优先级，数值越小越先执行，Hexo默认为10]
   priority: 12
 
-# 生成RSS订阅
+# 生成RSS订阅 hexo-generator-feed [https://github.com/hexojs/hexo-generator-feed]
 feed:
   enable: true
   type: atom
@@ -271,3 +276,103 @@ feed:
   icon: icon.png
   autodiscovery: true
   template:
+
+#hexo-tag-tweetable-quote [https://github.com/iamchathu/hexo-tag-tweetable-quote]
+tweetableQuote:
+  quote_font_color: #258fb8
+  quote_font_size: 1.7em
+  link_font_color: #6e7b8d
+  link_font_size: 1.0em
+  via_twitter_account: iamchathu
+  related_twitter_accounts: iamchathu,twitter
+
+#hexo-tag-plantuml [https://github.com/two/hexo-tag-plantuml]
+tag_plantuml:
+  type: static
+
+# hexo-github-card [https://github.com/Gisonrg/hexo-github-card]
+
+#hexo-bluesky-feed [https://github.com/antonbelev/hexo-bluesky-feed]
+#blueskyFeed:
+#  # The website URL used for constructing post links on Bluesky.
+#  url: "https://yourwebsite.com/"
+#  # The default message for Bluesky posts.
+#  # Use placeholders {title} and {url} for dynamic replacement.
+#  message: "Just published new blog post: {title}. Check it out here: {url}"
+
+
+#hexo-tag-share-post [https://github.com/wololock/hexo-tag-share-post]
+#share_post:
+#  facebook:
+#    url: 'https://www.facebook.com/sharer/sharer.php'
+#    query: 'u=%link&t=%title'
+#    text: 'Facebook'
+#
+#  twitter:
+#    url: 'https://twitter.com/intent/tweet'
+#    message: '"%title" %link via @%handle'
+#    query: 'text=%message'
+#    text: 'Twitter'
+#    handle: 'hexojs'
+#
+#  linkedin:
+#    url: 'https://www.linkedin.com/sharing/share-offsite/'
+#    query: 'url=%link&title=%title'
+#    text: 'LinkedIn'
+
+
+#hexo-abbrlink3 [https://github.com/JunKuangKuang/hexo-abbrlink3]
+# abbrlink config
+#abbrlink:
+#  alg: crc16      #support crc16(default) and crc32
+#  rep: dec        #support dec(default) and hex
+#  allow: [ 'post','school','cpp',"java","blog" ] #Allowed template types. The default is (" post ")
+#  disallow: [ ] #Unallowed template type. Default is an empty list
+
+
+# ⚠️⚠️⚠️仅开发环境使用 hexo-browser-reloader-websocket [https://github.com/yoshinorin/hexo-browser-reloader-websocket]
+#browser_reloader_websocket:
+#  enable: true
+#  server:
+#    port: 4001
+#  notification:
+#    message: "reloadBrowser"
+#    wait:
+#      min: 150 # ms
+#      autoCalc:
+#        enable: true
+#        coefficient: 1.0
+
+# hexo-renderer-markdown-it-plus [https://github.com/CHENXCHEN/hexo-renderer-markdown-it-plus]
+markdown_it_plus:
+  highlight: true
+  html: true
+  xhtmlOut: true
+  breaks: true
+  langPrefix:
+  linkify: true
+  typographer:
+  quotes: “”‘’
+  pre_class: highlight
+
+#hexo-submit-urls-to-search-engine?tab=readme-ov-file [https://github.com/cjh0613/hexo-submit-urls-to-search-engine?tab=readme-ov-file]
+# 主动推送Hexo博客新链接至谷歌必应百度搜索引擎，提升网站收录质量和速度。
+hexo_submit_urls_to_search_engine:
+  submit_condition: count # Submitted condition, optional value: count | period, Now only supports count
+  count: 10 # Submit the latest 10 links
+  period: 900 # Submit a link with a modification time of 900 seconds
+#  google: 0 #  Whether to submit to Google, optional values: 1 | 0 (0: No; 1: Yes)
+#  bing: 1 #  Whether to submit to bing, optional value: 1 | 0 (0: no; 1: yes)
+#  baidu: 1 # Whether to submit to baidu, optional value: 1 | 0 (0: no; 1: yes)
+#  txt_path: submit_urls.txt ## The address of the text document, the link to be pushed will be saved in this text document
+#  baidu_host: https://cjh0613.github.io ## Domain name registered in Baidu webmaster platform
+#  baidu_token: xxxxx ## Please note that this is your secret key, so do not publish the website source code in the public repository!
+#  bing_host: https://cjh0613.github.io ## Domain name registered in Bing webmaster platform
+#  bing_enable_indexnow: false # Is the Bing IndexNow feature enabled? The optional values are: true (Yes) | false (No). Only v2.1.1 and above can enable this feature.
+#  bing_token: xxxxx ## Please note that this is your secret key, so do not publish the website source code in the public repository!
+#  google_host: https://cjh0613.github.io ## Domain name registered in Google webmaster platform
+#  google_key_file: Project.json # Store the json file of the google key in the root directory of the website (same location as the hexo _config.yml file), please do not publish the source code of the website in the public warehouse!
+#  google_proxy: 0 # Set the proxy used to submit urls to Google
+#  replace: 0  # Whether to replace some substrings in links, optional value: 1 | 0 (0: no; 1: yes)
+#  find_what: http://cjh0613.github.io/blog
+#  replace_with: https://cjh0613.com

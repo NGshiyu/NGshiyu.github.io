@@ -298,6 +298,24 @@ follow_me:
 related_posts:
   enable: true
   icon: fa fa-signs-post
+  enable_env_name: prod
+  filter_threshold: 0.3
+  related_count: 3
+  weight:
+    title: 0.05
+    description: 0.05
+    keywords: 0.01
+    tags: 0.005
+    categories: 0.005
+    text: 1
+  stemmers:
+    - en
+    - zh-CN
+  reserved:
+    - asp.net
+    - vs.net
+    - ado.net
+    - .net
 
 # Post edit # [文章编辑]
 # Easily browse and edit blog source code online. # [轻松在线浏览和编辑博客源代码]
@@ -725,9 +743,9 @@ gitalk:
   github_id: 'NGshiyu' # GitHub repo owner # [GitHub仓库所有者]
   repo: 'NGshiyu.github.io' # Repository name to store issues # [存储问题的仓库名称]
   # 请填入你的 GitHub Application Client ID # [GitHub应用程序客户端ID]
-  client_id: ${GITALK_GITHUB_CLIENT_ID}
+  client_id: ${env.GITALK_GITHUB_CLIENT_ID}
   # 请填入你的 GitHub Application Client Secret # [GitHub应用程序客户端密钥]
-  client_secret: ${GITALK_GITHUB_CLIENT_SECRET}
+  client_secret: ${env.GITALK_GITHUB_CLIENT_SECRET}
   admin_user: 'NGshiyu' # GitHub repo owner and collaborators, only these guys can initialize gitHub issues # [GitHub仓库所有者和协作者，只有这些人可以初始化GitHub问题]
   distraction_free_mode: true # Facebook-like distraction free mode # [类似Facebook的无干扰模式]
   redirect_uri: https://ngshiyu.github.io/
