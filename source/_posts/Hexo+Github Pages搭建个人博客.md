@@ -34,8 +34,11 @@ tags:
 - [Hexo](https://github.com/hexojs/hexo): 基于Node.js 开发的开源静态博客框架，将Markdown的文件处理为静态的HTML网页，结合内置的[插件](https://hexo.io/plugins/)等内容，编译为静态网页部署到服务器
 - [Next](https://github.com/next-theme/hexo-theme-next): 一个高质量主题插件，集成了一些插件功能，同时也具备扩展能力，可以快速定制你的个人博客。[参考](https://hexo-next.readthedocs.io/zh-cn/latest/)
   - gitalk: Next 集成的一个 GitHub 评论框架，接入GitHub Issue，
-  - ......感兴趣的
+  - ......Next集成了一些使用的插件，感兴趣的可以[自行探索](https://theme-next.js.org/plugins/)
 - Github：用于存放博客的源数据，并结合 Actions + Pages 的能力实现自动化部署和代理访问
+
+> 通过这种方式，可以实现0成本搭建博，并且因为是托管在GitHub上面的，你也无须担心被攻击，只要注意避免在public的仓库中泄露自己的隐私即可，而且上手的成本非常低。
+
 
 # 实现步骤
 
