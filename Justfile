@@ -2,7 +2,7 @@
 export PATH := join(justfile_directory(), "node_modules", "bin") + ":" + env_var('PATH')
 
 build:
-  npx hexo generate
+  npx hexo generate --dev
 clean:
   npx hexo clean
 server:
@@ -10,4 +10,4 @@ server:
 run:
   npx hexo server
 all:
-  npx hexo clean && npx hexo generate
+  npx hexo clean && npx hexo generate --dev
