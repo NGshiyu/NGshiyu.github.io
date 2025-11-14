@@ -1,0 +1,87 @@
+{
+  "name": "忆秉拾瑜",
+  "short_name": "拾瑜",
+  "description": "高楼广厦，始于垒土！个人技术博客，专注于前端开发、技术分享和学习笔记。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#222222",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/images/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["education", "technology", "blog", "personal"],
+  "shortcuts": [
+    {
+      "name": "最新文章",
+      "short_name": "文章",
+      "description": "查看最新的博客文章",
+      "url": "/",
+      "icons": [
+        {
+          "src": "/images/favicon-32x32.png",
+          "sizes": "32x32"
+        }
+      ]
+    },
+    {
+      "name": "关于我",
+      "short_name": "关于",
+      "description": "了解博主信息",
+      "url": "/about/",
+      "icons": [
+        {
+          "src": "/images/favicon-32x32.png",
+          "sizes": "32x32"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "screenshots": [
+    {
+      "src": "/images/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "忆秉拾瑜博客桌面版"
+    },
+    {
+      "src": "/images/screenshot-mobile.png",
+      "sizes": "375x667",
+      "type": "image/png",
+      "platform": "narrow",
+      "label": "忆秉拾瑜博客移动版"
+    }
+  ]
+}
