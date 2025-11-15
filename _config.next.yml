@@ -57,14 +57,14 @@ lightdark:
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/next/icon1.png        # 浏览器标签页、书签、历史记录中的小图标 (16x16px)
-  medium: /images/next/favicon.ico     # 高分辨率屏幕、Windows任务栏、Chrome应用图标 (32x32px)
-  apple_touch_icon: /images/next/apple-touch-icon.png  # iOS/Android设备添加到主屏幕时的图标 (180x180px)
-  safari_pinned_tab: /images/next/icon0.svg  # macOS Safari标签页彩色图标、PWA应用图标
-  android_manifest: /images/next/manifest.json
+  small: /images/icon1.png        # 浏览器标签页、书签、历史记录中的小图标 (16x16px)
+  medium: /images/favicon.ico     # 高分辨率屏幕、Windows任务栏、Chrome应用图标 (32x32px)
+  apple_touch_icon: /images/apple-touch-icon-next.png  # iOS/Android设备添加到主屏幕时的图标 (180x180px)
+  safari_pinned_tab: /images/icon0.svg  # macOS Safari标签页彩色图标、PWA应用图标
+  android_manifest: /images/manifest.json
 
 # Custom Logo (Warning: Do not support scheme Mist) # [自定义Logo（警告：不支持Mist方案）]
-custom_logo: /images/next/apple-touch-icon.png          # 网站页眉显示的品牌标识，替代默认文字标题 (200x60px)
+custom_logo: /images/apple-touch-icon-next.png          # 网站页眉显示的品牌标识，替代默认文字标题 (200x60px)
 
 # Creative Commons 4.0 International License. # [知识共享4.0国际许可证]
 # See: https://creativecommons.org/about/cclicenses/ # [参见：https://creativecommons.org/about/cclicenses/]
@@ -85,7 +85,7 @@ open_graph:
   enable: true
   options:
     type: 'blog'
-    image: /images/next/apple-touch-icon.png  # 建议放一张 1200x630 的图
+    image: /images/apple-touch-icon-next.png  # 建议放一张 1200x630 的图
   #twitter_card: <twitter:card>
   #twitter_id: <twitter:creator>
   #twitter_site: <twitter:site>
