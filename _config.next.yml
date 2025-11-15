@@ -84,6 +84,8 @@ creative_commons:
 open_graph:
   enable: true
   options:
+    type: 'blog'
+    image: /images/next/apple-touch-icon.png  # 建议放一张 1200x630 的图
   #twitter_card: <twitter:card>
   #twitter_id: <twitter:creator>
   #twitter_site: <twitter:site>
