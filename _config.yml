@@ -264,7 +264,7 @@ feed:
   content_limit: 140
   content_limit_delim: ' '
   order_by: -date
-  icon: /images/next/favicon-48.ico
+  icon: /images/next/favicon.ico
   autodiscovery: true
   template:
 
