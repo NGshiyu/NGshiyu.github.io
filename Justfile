@@ -8,6 +8,6 @@ clean:
 server:
   npx hexo server
 run:
-  npx hexo server
+  npx hexo clean && npx hexo generate --dev && npx hexo server --dev
 all:
   npx hexo clean && npx hexo generate --dev

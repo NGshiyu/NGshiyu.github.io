@@ -19,7 +19,7 @@ minify: true
 # Define custom file paths. # [定义自定义文件路径]
 # Create your custom files in site directory `source/_data` and uncomment needed files below. # [在网站目录`source/_data`中创建自定义文件，并取消下面所需文件的注释]
 custom_file_path:
-  #head: source/_data/head.njk
+  head: source/_data/head.njk
   #header: source/_data/header.njk
   #sidebar: source/_data/sidebar.njk
   #postMeta: source/_data/post-meta.njk
@@ -57,14 +57,14 @@ lightdark:
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/favicon-16x16.png      # 浏览器标签页、书签、历史记录中的小图标 (16x16px)
-  medium: /images/favicon-32x32.png     # 高分辨率屏幕、Windows任务栏、Chrome应用图标 (32x32px)
-  apple_touch_icon: /images/apple-touch-icon.png  # iOS/Android设备添加到主屏幕时的图标 (180x180px)
-  safari_pinned_tab: /images/favicon-512x512.png   # macOS Safari标签页彩色图标、PWA应用图标
-  android_manifest: /images/manifest.json
+  small: /images/next/icon96.png        # 浏览器标签页、书签、历史记录中的小图标 (16x16px)
+  medium: /images/next/icon96.png     # 高分辨率屏幕、Windows任务栏、Chrome应用图标 (32x32px)
+  apple_touch_icon: /images/next/apple-touch-icon.png  # iOS/Android设备添加到主屏幕时的图标 (180x180px)
+  safari_pinned_tab: /images/next/icon0.svg  # macOS Safari标签页彩色图标、PWA应用图标
+  android_manifest: /images/next/manifest.json
 
 # Custom Logo (Warning: Do not support scheme Mist) # [自定义Logo（警告：不支持Mist方案）]
-custom_logo: /images/android-chrome-512x512.png           # 网站页眉显示的品牌标识，替代默认文字标题 (200x60px)
+custom_logo: /images/next/apple-touch-icon.png          # 网站页眉显示的品牌标识，替代默认文字标题 (200x60px)
 
 # Creative Commons 4.0 International License. # [知识共享4.0国际许可证]
 # See: https://creativecommons.org/about/cclicenses/ # [参见：https://creativecommons.org/about/cclicenses/]
@@ -73,8 +73,8 @@ creative_commons:
   license: by-nc-sa
   # Available values: big | small # [可用值：big | small]
   size: small
-  sidebar: false
-  post: false
+  sidebar: true
+  post: true
   # You can set a language value if you prefer a translated version of CC license, e.g. deed.zh # [如果您偏好CC许可证的翻译版本，可以设置语言值，例如deed.zh]
   # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org # [CC许可证提供39种语言，您可以在https://creativecommons.org上找到您需要的具体和正确的缩写]
   language:

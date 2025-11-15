@@ -1,0 +1,31 @@
+{
+  "name": "丨忆秉拾瑜",
+  "short_name": "忆秉拾瑜",
+  "description": "高楼广厦，始于垒土！",
+  "icons": [
+    {
+      "src": "/images/next/apple-icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/next/icon96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "theme_color": "#222222",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
+  "orientation": "portrait-primary",
+  "categories": [
+    "education",
+    "technology",
+    "blog"
+  ],
+  "lang": "zh-CN"
+}
