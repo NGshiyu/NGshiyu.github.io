@@ -60,7 +60,7 @@ favicon:
   small: /images/icon1.png        # 浏览器标签页、书签、历史记录中的小图标 (16x16px)
   medium: /images/favicon.ico     # 高分辨率屏幕、Windows任务栏、Chrome应用图标 (32x32px)
   apple_touch_icon: /images/apple-touch-icon-next.png  # iOS/Android设备添加到主屏幕时的图标 (180x180px)
-  safari_pinned_tab: /images/icon0.svg  # macOS Safari标签页彩色图标、PWA应用图标
+  safari_pinned_tab: /images/logo.svg  # macOS Safari标签页彩色图标、PWA应用图标
   android_manifest: /images/manifest.json
 
 # Custom Logo (Warning: Do not support scheme Mist) # [自定义Logo（警告：不支持Mist方案）]
