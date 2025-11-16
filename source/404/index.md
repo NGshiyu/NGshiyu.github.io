@@ -1,10 +1,3 @@
----
-title: 你迷失了，换个路线把！
-date: 2025-11-11 21:20:41
-permalink: /404.html
-toc: false
-comments: false
----
 <!DOCTYPE HTML>
 <html>
 <head>
