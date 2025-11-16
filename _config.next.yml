@@ -19,7 +19,7 @@ minify: true
 # Define custom file paths. # [定义自定义文件路径]
 # Create your custom files in site directory `source/_data` and uncomment needed files below. # [在网站目录`source/_data`中创建自定义文件，并取消下面所需文件的注释]
 custom_file_path:
-  head: source/_data/head.njk
+#  head: source/_data/head.njk
   #header: source/_data/header.njk
   #sidebar: source/_data/sidebar.njk
   #postMeta: source/_data/post-meta.njk
@@ -57,8 +57,8 @@ lightdark:
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/icon1.png        # 浏览器标签页、书签、历史记录中的小图标 (16x16px)
-  medium: /images/favicon.ico     # 高分辨率屏幕、Windows任务栏、Chrome应用图标 (32x32px)
+  small: /images/favicon-16x16.png # 浏览器标签页、书签、历史记录中的小图标 (16x16px)
+  medium: /images/favicon-32x32.png   # 高分辨率屏幕、Windows任务栏、Chrome应用图标 (32x32px)
   apple_touch_icon: /images/apple-touch-icon-next.png  # iOS/Android设备添加到主屏幕时的图标 (180x180px)
   safari_pinned_tab: /images/logo.svg  # macOS Safari标签页彩色图标、PWA应用图标
   android_manifest: /images/manifest.json
@@ -152,7 +152,7 @@ sidebar:
 # Sidebar Avatar # [侧边栏头像]
 avatar:
   # Replace the default image and set the url here. # [替换默认图片并在此处设置URL]
-  url: #/images/avatar.gif
+  url: /images/apple-touch-icon-next.png #/images/avatar.gif
   # If true, the avatar will be displayed in circle. # [如果为true，头像将以圆形显示]
   rounded: false
   # If true, the avatar will be rotated with the cursor. # [如果为true，头像将随光标旋转]
