@@ -72,8 +72,7 @@ jobs:
 
       # 使用 Hexo 生成静态文件，加载替换后的配置文件
       - name: Build with Hexo
-        run: npx hexo clean 
-             npx hexo generate --prod
+        run: npx hexo clean && npx hexo generate --prod
 
       # 上传构建生成的静态文件作为 artifact（供后续部署使用）
       - name: Upload artifact
