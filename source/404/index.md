@@ -14,6 +14,6 @@ comments: false
   <meta name="robots" content="index,follow"/>
 </head>
 <body>
-<script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" charset="utf-8" homePageUrl="http://xingwangzhe.fun" homePageName="回到我的主页"></script>
+<script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" charset="utf-8" homePageUrl=https://ngshiyu.github.io/" homePageName="Back to Home"></script>
 </body>
 </html>
