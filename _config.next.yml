@@ -64,7 +64,7 @@ favicon:
   android_manifest: /images/manifest.json
 
 # Custom Logo (Warning: Do not support scheme Mist) # [自定义Logo（警告：不支持Mist方案）]
-custom_logo: /images/apple-touch-icon-next.png          # 网站页眉显示的品牌标识，替代默认文字标题 (200x60px)
+#custom_logo: /images/apple-touch-icon-next.png          # 网站页眉显示的品牌标识，替代默认文字标题 (200x60px)
 
 # Creative Commons 4.0 International License. # [知识共享4.0国际许可证]
 # See: https://creativecommons.org/about/cclicenses/ # [参见：https://creativecommons.org/about/cclicenses/]
@@ -152,7 +152,7 @@ sidebar:
 # Sidebar Avatar # [侧边栏头像]
 avatar:
   # Replace the default image and set the url here. # [替换默认图片并在此处设置URL]
-  url: /images/apple-touch-icon-next.png #/images/avatar.gif
+  url: /images/origin.jpg  #/images/avatar.gif
   # If true, the avatar will be displayed in circle. # [如果为true，头像将以圆形显示]
   rounded: false
   # If true, the avatar will be rotated with the cursor. # [如果为true，头像将随光标旋转]
