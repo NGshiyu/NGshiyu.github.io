@@ -12,7 +12,7 @@ run:
 all:
   npx hexo clean && npx hexo generate --dev
 push comment:
-  git pull && git add . && git commit -m "{{comment}}" && git push
+  git pull && git add . && git commit -S -m "{{comment}}" && git push
 
 # 定义一个带参数的配方 name,以xx模板创建文章
 # 在命令里引用参数要用 {{}}，且不能省略引号

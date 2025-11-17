@@ -1,0 +1,433 @@
+// =============================================================================
+// GitHub卡片样式 - GR Card Style
+// =============================================================================
+// 此文件包含所有GitHub卡片相关的样式定义
+// 包括基础样式、流光边框、暗色主题、响应式适配等
+
+// =============================================================================
+// 基础样式和布局
+// =============================================================================
+
+// GitHub卡片内的元素不缩进（覆盖全局段落缩进）
+.post-body .gr-card p,
+.post-body .gr-fullname p,
+.post-body .gr-description
+  text-indent 0
+
+// 确保GitHub卡片布局正常
+.post-body .gr-card
+  text-indent 0
+
+// 确保头像垂直居中 - 覆盖插件默认样式
+.post-body .gr-header
+  display flex !important
+  align-items center  // 垂直居中
+  justify-content center  // 水平居中
+  height 100%  // 占满整个高度
+  margin 0 0 0 20px !important  // 统一向右偏移10px
+
+.post-body .gr-header img
+  width 80px
+  height 80px
+  object-fit cover
+  border-radius 50%
+  margin 0 !important
+  transform none !important  // 移除插件的transform定位
+  position static !important
+  top auto !important
+  left auto !important
+
+// =============================================================================
+// 流光边框和暗色主题效果
+// =============================================================================
+
+.post-body .gr-card
+  background-color #151515
+  box-shadow 0px 0px 10px 1px #000000ee
+  border-radius 8px
+  position relative
+  overflow hidden
+  transition all 0.3s ease
+  height 100px  // 固定高度，防止小屏幕变形
+  min-height 100px  // 确保最小高度
+  max-height 100px  // 限制最大高度
+
+// 流光边框效果
+.post-body .gr-card::before
+  content ''
+  position absolute
+  top 0
+  left -100%
+  width 100%
+  height 100%
+  background linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent)
+  animation flowingBorder 3000ms infinite linear
+  z-index 1
+
+.post-body .gr-card::after
+  content ''
+  position absolute
+  inset 2
+  background-color #151515
+  border-radius 6
+  z-index 2
+
+// 确保卡片内容在流光边框之上
+.post-body .gr-header,
+.post-body .gr-content,
+.post-body .gr-footer
+  position relative
+  z-index 3
+  background transparent
+
+// =============================================================================
+// 暗色主题适配
+// =============================================================================
+
+.post-body .gr-fullname p,
+.post-body .gr-description
+  color #e5e7eb
+
+.post-body .gr-fullname p i
+  color #ff9966
+
+.post-body .gr-language
+  color #60a5fa
+  white-space nowrap      // 防止多语言换行
+  overflow hidden        // 隐藏溢出内容
+  text-overflow ellipsis  // 显示省略号
+
+.post-body .gr-card-toolbar
+  background rgba(0, 0, 0, 0.55)
+  backdrop-filter blur(2px)
+
+// =============================================================================
+// 链接图标样式
+// =============================================================================
+
+// 修正外部链接图标颜色
+.post-body #gr-repo-link-icon
+  color #ff9966 !important
+  transition color 0.3s ease
+
+.post-body .gr-card:hover #gr-repo-link-icon
+  color #ffffff !important
+
+// =============================================================================
+// 内部布局和间距调整
+// =============================================================================
+
+// 调整GitHub卡片内部元素间距 - 三分法布局
+.post-body .gr-content
+  display flex
+  flex-direction column
+  justify-content flex-start  // 从顶部开始布局
+  padding 0  // 移除内边距，使用精确的三分法定位
+  height 100%  // 确保内容区域占满卡片高度
+  position relative  // 为绝对定位提供参考
+  margin 0 8px 0 40px  // 左边25px间距距离头像，右边确保不覆盖星标区域
+
+.post-body .gr-fullname
+  position absolute
+  top 10px  // 从顶部开始
+  height 50%  // 占据上二分之一，给更多空间给仓库名
+  width 100%
+  display flex
+  align-items center  // 垂直居中
+  justify-content flex-start  // 左对齐
+
+.post-body .gr-fullname p
+  margin 0  // 移除默认margin
+  padding 0
+  line-height 1.6
+  white-space nowrap      // 防止换行
+  overflow hidden        // 隐藏溢出内容
+  text-overflow ellipsis  // 显示省略号
+  max-width calc(100% - 30px)  // 为图标预留空间
+
+.post-body .gr-description
+  position absolute
+  top 50%  // 从二分之一处开始
+  height 50%  // 占据下二分之一
+  width 100%
+  display flex
+  align-items flex-start  // 顶部对齐，更好的视觉效果
+  justify-content flex-start  // 左对齐
+  margin 0  // 移除所有margin
+  padding 0
+  padding-top 8px  // 给顶部一点间距
+  white-space nowrap      // 防止换行
+  overflow hidden        // 隐藏溢出内容
+  text-overflow ellipsis  // 显示省略号
+  max-width 100%         // 最大宽度为容器宽度
+
+// =============================================================================
+// 悬停效果
+// =============================================================================
+
+.post-body .gr-card:hover
+  transform translateY(-2px)
+  box-shadow 0px 4px 20px rgba(255, 153, 102, 0.3), 0px 0px 15px #000000ee
+
+// =============================================================================
+// 移动端响应式适配
+// =============================================================================
+
+// 中等屏幕适配（≤768px）
+@media (max-width: 768px)
+  .post-body .gr-card
+    width 100%
+    height 100px  // 保持与桌面端一致的高度
+    min-height 100px
+    max-height 100px
+    margin-bottom 25px
+
+  .post-body .gr-header
+    min-width 70px
+    margin 8px 8px 8px 10px  // 移动端统一10px间距
+
+  .post-body .gr-header img
+    width 60px
+    height 60px
+
+  .post-body .gr-content
+    margin 8px 8px 8px 15px  // 移动端左边15px间距，右边8px间距确保不覆盖星标
+    padding 0  // 保持三分法布局，不使用内边距
+    height 100%
+    position relative
+
+  .post-body .gr-footer
+    min-width 70px
+    margin 8px 12px 8px 8px
+
+  // 移动端仓库名称处理 - 二分法布局适配
+  .post-body .gr-fullname
+    position absolute
+    top 0
+    height 50%
+    width 100%
+    display flex
+    align-items center
+    justify-content flex-start
+
+  .post-body .gr-fullname p
+    font-size 0.75rem
+    line-height 1.6rem
+    white-space nowrap
+    overflow hidden
+    text-overflow ellipsis
+    max-width calc(100% - 35px)  // 移动端为图标预留更多空间
+    margin 0
+    padding 0
+
+  .post-body #gr-github-icon
+    font-size 1.1rem
+    margin-right 4px
+    flex-shrink 0  // 防止图标被压缩
+
+  .post-body .gr-description
+    position absolute
+    top 50%
+    height 50%
+    width 100%
+    display flex
+    align-items flex-start  // 顶部对齐
+    justify-content flex-start
+    margin 0
+    padding 0
+    padding-top 6px  // 移动端较小的顶部间距
+    font-size 0.7rem
+    line-height 1.4rem
+    white-space nowrap      // 防止换行
+    overflow hidden        // 隐藏溢出内容
+    text-overflow ellipsis  // 显示省略号
+    max-width 100%         // 最大宽度为容器宽度
+
+  // 语言和星标显示调整 - 多语言支持
+  .post-body .gr-language
+    font-size 0.7rem
+    line-height 1.8rem
+    white-space nowrap      // 防止换行
+    overflow hidden        // 隐藏溢出内容
+    text-overflow ellipsis  // 显示省略号
+    max-width 100%         // 限制最大宽度
+
+  .post-body #gr-star-icon
+    font-size 0.7rem
+
+  // 工具栏图标调整
+  .post-body #gr-repo-link-icon
+    font-size 14px !important
+
+  .post-body .gr-card-toolbar
+    padding 4px
+
+// 小屏幕适配（≤480px）- 保持横向布局
+@media (max-width: 480px)
+  .post-body .gr-card
+    display flex  // 确保保持flex布局
+    height 100px  // 保持与桌面端一致的高度
+    min-height 100px
+    max-height 100px
+    flex-wrap nowrap  // 防止换行
+
+  .post-body .gr-header
+    min-width 60px  // 进一步减小最小宽度
+    margin 6px 6px 6px 10px  // 减小间距
+    flex-shrink 0  // 防止被压缩
+
+  .post-body .gr-header img
+    width 50px  // 减小头像尺寸
+    height 50px
+
+  .post-body .gr-content
+    margin 6px 6px 6px 15px  // 小屏幕左边15px间距，右边6px间距确保不覆盖星标
+    padding 0  // 保持三分法布局，不使用内边距
+    flex 1  // 占据剩余空间
+    min-width 0  // 允许收缩
+    height 100%
+    position relative
+
+  .post-body .gr-footer
+    min-width 60px  // 减小最小宽度
+    margin 6px 10px 6px 6px  // 减小间距
+    flex-shrink 0  // 防止被压缩
+
+  // 超小屏幕的仓库名称处理 - 二分法布局适配
+  .post-body .gr-fullname
+    position absolute
+    top 0
+    height 50%
+    width 100%
+    display flex
+    align-items center
+    justify-content flex-start
+
+  .post-body .gr-fullname p
+    font-size 0.65rem  // 进一步减小字体
+    line-height 1.4rem
+    white-space nowrap
+    overflow hidden
+    text-overflow ellipsis
+    max-width calc(100% - 25px)  // 进一步限制宽度
+    margin 0
+    padding 0
+
+  .post-body #gr-github-icon
+    font-size 0.9rem  // 减小图标尺寸
+    margin-right 2px
+    flex-shrink 0
+
+  .post-body .gr-description
+    position absolute
+    top 50%
+    height 50%
+    width 100%
+    display flex
+    align-items flex-start  // 顶部对齐
+    justify-content flex-start
+    margin 0
+    padding 0
+    padding-top 4px  // 超小屏幕更小的顶部间距
+    font-size 0.6rem  // 进一步减小字体
+    line-height 1.2rem
+    white-space nowrap      // 防止换行
+    overflow hidden        // 隐藏溢出内容
+    text-overflow ellipsis  // 显示省略号
+    max-width 100%         // 最大宽度为容器宽度
+
+  .post-body .gr-language
+    font-size 0.6rem
+    line-height 1.5rem
+
+  .post-body #gr-star-icon
+    font-size 0.6rem
+
+  .post-body #gr-repo-link-icon
+    font-size 12px !important  // 进一步减小图标
+
+  .post-body .gr-card-toolbar
+    padding 2px
+
+  .post-body .gr-language-star
+    margin auto auto 15px auto  // 调整垂直居中位置
+
+// 极小屏幕保护（≤360px）
+@media (max-width: 360px)
+  .post-body .gr-card
+    height 100px  // 保持与桌面端一致的高度
+    min-height 100px
+    max-height 100px
+
+  .post-body .gr-header
+    min-width 50px  // 进一步减小宽度
+    margin 4px 4px 4px 10px  // 极小屏幕统一10px间距
+
+  .post-body .gr-header img
+    width 40px
+    height 40px
+
+  .post-body .gr-content
+    margin 4px 4px 4px 15px  // 极小屏幕左边15px间距，右边4px间距确保不覆盖星标
+    padding 0  // 保持三分法布局，不使用内边距
+    height 100%
+    position relative
+
+  .post-body .gr-footer
+    min-width 50px
+    margin 4px 8px 4px 4px
+
+  // 极小屏幕的仓库名称处理 - 二分法布局适配
+  .post-body .gr-fullname
+    position absolute
+    top 0
+    height 50%
+    width 100%
+    display flex
+    align-items center
+    justify-content flex-start
+
+  .post-body .gr-fullname p
+    font-size 0.6rem
+    max-width calc(100% - 20px)
+    margin 0
+    padding 0
+
+  .post-body #gr-github-icon
+    font-size 0.8rem
+
+  .post-body .gr-language
+    font-size 0.55rem
+
+  .post-body #gr-repo-link-icon
+    font-size 10px !important
+
+  // 极小屏幕描述文本处理 - 二分法布局适配
+  .post-body .gr-description
+    position absolute
+    top 50%
+    height 50%
+    width 100%
+    display flex
+    align-items flex-start  // 顶部对齐
+    justify-content flex-start
+    margin 0
+    padding 0
+    padding-top 2px  // 极小屏幕最小的顶部间距
+    font-size 0.55rem  // 进一步减小字体
+    line-height 1.1rem
+    white-space nowrap
+    overflow hidden
+    text-overflow ellipsis
+    max-width 100%
+
+// =============================================================================
+// 动画定义
+// =============================================================================
+
+// 流光边框动画
+@keyframes flowingBorder
+  0%
+    left -100%
+  100%
+    left 100%
