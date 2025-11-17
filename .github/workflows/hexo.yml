@@ -69,6 +69,9 @@ jobs:
         env:
           GITALK_GITHUB_CLIENT_ID: ${{ secrets.GITALK_GITHUB_CLIENT_ID }}
           GITALK_GITHUB_CLIENT_SECRET: ${{ secrets.GITALK_GITHUB_CLIENT_SECRET }}
+          GOOGLE_ANALYTICS_APP_ID: ${{ secrets.GOOGLE_ANALYTICS_APP_ID }}
+          GISCUS_CATEGORY_ID: ${{ secrets.GISCUS_CATEGORY_ID }}
+          GISCUS_REPO_ID: ${{ secrets.GISCUS_REPO_ID }}
 
       # 使用 Hexo 生成静态文件，加载替换后的配置文件
       - name: Build with Hexo

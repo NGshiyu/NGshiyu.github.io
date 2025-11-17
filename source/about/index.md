@@ -1,7 +1,7 @@
 ---
 title: 关于我
 date: 2025-11-09 18:30:00
-comments: true
+comments: false
 ---
 
 # 关于我 👋

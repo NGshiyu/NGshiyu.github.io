@@ -11,3 +11,20 @@ run:
   npx hexo clean && npx hexo generate --dev && npx hexo server --dev
 all:
   npx hexo clean && npx hexo generate --dev
+push comment:
+  git pull && git add . && git commit -m "{{comment}}" && git push
+
+# 定义一个带参数的配方 name,以xx模板创建文章
+# 在命令里引用参数要用 {{}}，且不能省略引号
+new layout name:
+  npx hexo new "{{layout}}" "{{name}}"
+my name:
+  npx hexo new my "{{name}}"
+post name:
+  npx hexo new post "{{name}}"
+draft name:
+  npx hexo new draft "{{name}}"
+page name:
+  npx hexo new page "{{name}}"
+jn name:
+  npx hexo new jn "{{name}}"

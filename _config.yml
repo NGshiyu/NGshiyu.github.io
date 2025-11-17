@@ -33,7 +33,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render: 404
+skip_render: ["404/**"]
 
 # Writing # [写作设置]
 new_post_name: :title.md # File name of new posts # [新文章的文件名]
@@ -107,9 +107,9 @@ pagination_dir: page
 
 # Include / Exclude file(s) # [包含/排除文件]
 ## include:/exclude: options only apply to the 'source/' folder # [include:/exclude选项仅适用于'source/'文件夹]
-include:
-exclude:
-ignore:
+include: []
+exclude: []
+ignore: []
 
 # Extensions # [扩展]
 ## Plugins: https://hexo.io/plugins/ # [插件：https://hexo.io/plugins/]
@@ -317,7 +317,7 @@ tag_plantuml:
 #abbrlink:
 #  alg: crc16      #support crc16(default) and crc32
 #  rep: dec        #support dec(default) and hex
-#  allow: [ 'post','school','cpp',"java","blog" ] #Allowed template types. The default is (" post ")
+#  allow: [ 'post','school','cpp',"jn.md","blog" ] #Allowed template types. The default is (" post ")
 #  disallow: [ ] #Unallowed template type. Default is an empty list
 
 

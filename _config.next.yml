@@ -702,7 +702,7 @@ comments:
   style: tabs
   # Choose a comment system to be displayed by default. # [选择默认显示的评论系统]
   # Available values: disqus | disqusjs | livere | gitalk | utterances | isso # [可用值：disqus | disqusjs | livere | gitalk | utterances | isso]
-  active: gitalk
+  active: giscus
   # Setting `true` means remembering the comment system selected by the visitor. # [设置为`true`意味着记住访客选择的评论系统]
   storage: true
   # Lazyload all comment systems. # [延迟加载所有评论系统]
@@ -712,8 +712,8 @@ comments:
     #disqus:
     #  text: Load Disqus # [加载Disqus]
     #  order: -1
-    gitalk:
-      order: -1
+#    giscus:
+#      order: -1
 
 # Disqus
 # For more information: https://disqus.com # [更多信息：https://disqus.com]
@@ -741,7 +741,7 @@ livere_uid: # <your_uid>
 # Gitalk
 # For more information: https://gitalk.github.io # [更多信息：https://gitalk.github.io]
 gitalk:
-  enable: true  # 请在本地或 CI/CD 中启用
+  enable: false  # 请在本地或 CI/CD 中启用
   github_id: 'NGshiyu' # GitHub repo owner # [GitHub仓库所有者]
   repo: 'NGshiyu.github.io' # Repository name to store issues # [存储问题的仓库名称]
   # 请填入你的 GitHub Application Client ID # [GitHub应用程序客户端ID]
@@ -757,6 +757,40 @@ gitalk:
   # If you want everyone visiting your site to see a uniform language, you can set a force language value # [如果您希望访问您网站的每个人都看到统一的语言，可以设置强制语言值]
   # Available values: en | es-ES | fr | ru | zh-CN | zh-TW # [可用值：en | es-ES | fr | ru | zh-CN | zh-TW]
 #  language: zh-CN
+
+giscus:
+  # 是否启用 Giscus 评论系统
+  enable: true
+  # 是否显示加载动画
+  loading: lazy
+  # GitHub 仓库，格式为 username/repo-name
+  repo: NGshiyu/NGshiyu.github.io
+  # GitHub 仓库的唯一ID
+  repo_id: ${env.GISCUS_REPO_ID}
+  # GitHub Discussions 分类名称
+  category: Announcements
+  # Discussions 分类的唯一 ID
+  category_id: ${env.GISCUS_CATEGORY_ID}
+  # 指定 GitHub discussion 的匹配规则
+  mapping: title
+  # 当 mapping 为 specific 时的特定术语
+#  term:
+  # 是否启用严格的标题匹配
+  strict: 1
+  # 是否启用主帖子上的反应
+  reactions_enabled: 1
+  # 是否输出 discussion 的元数据
+  emit_metadata: 1
+  # 亮色主题
+  theme: dark
+  # 暗色主题
+  dark: dark
+  # 评论区的语言
+  lang: zh-CN
+  # 评论输入框的位置
+  input_position: top
+  # 懒加载评论
+  data_loading: lazy
 
 
 # Utterances
@@ -794,7 +828,7 @@ addtoany:
 # Google Analytics
 # See: https://analytics.google.com # [参见：https://analytics.google.com]
 google_analytics:
-  tracking_id: # <app_id>
+  tracking_id: ${env.GOOGLE_ANALYTICS_APP_ID} # <app_id>
   # By default, NexT will load an external gtag.js script on your site. # [默认情况下，NexT将在您的网站上加载外部gtag.js脚本]
   # If you only need the pageview feature, set the following option to true to get a better performance. # [如果您只需要页面浏览功能，请将以下选项设置为true以获得更好的性能]
   only_pageview: false
