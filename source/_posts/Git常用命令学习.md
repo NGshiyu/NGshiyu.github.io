@@ -121,8 +121,7 @@ date: 2025-11-18 14:15:18
 3. 回滚无用提交
 4. 回滚之后的提交仍然可以正常运行
 
-> 回滚的操作步骤
-
+### 回滚的操作步骤
 ```shell
 //查看当前所有的提交历史
 git log --all
@@ -137,8 +136,8 @@ git push origin HEAD --force
 git reflog
 //回滚掉回滚
 git reset --hard id
-```git push origin HEAD --force
-
+git push origin HEAD --force
+```
 
 ### git pull --allow-unrelated-histories
 
@@ -147,8 +146,8 @@ git reset --hard id
 ### git merge master --allow-unrelated-histories
 
 > 合并无关历史
----
 
+---
 ## 移动提交记录（整理提交记录）
 
 ### Git Cherry-pick  [cada1... caada2... daag3...]

@@ -197,7 +197,7 @@ toc:
   # Automatically add list number to toc. # [自动为目录添加列表编号]
   number: true
   # If true, all words will placed on next lines if header width longer then sidebar width. # [如果为true，当标题宽度超过侧边栏宽度时，所有单词将放置在下一行]
-  wrap: true
+  wrap: false
   # If true, all level of TOC in a post will be displayed, rather than the activated part of it. # [如果为true，将显示文章中所有级别的目录，而不是仅显示激活的部分]
   expand_all: true
   # Maximum heading depth of generated toc. # [生成的目录的最大标题深度]
