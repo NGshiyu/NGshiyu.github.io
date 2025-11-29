@@ -162,7 +162,7 @@ getBundleID() {
 > kMDItemKind            = "JSON Document"
 > ```
 
-#### 命令行
+具体的配置如下
 
 ```shell
 alias getuti="mdls -name kMDItemContentType -name kMDItemContentTypeTree -name kMDItemKind "
