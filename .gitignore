@@ -24,3 +24,4 @@ config/private.*
 _config.next.local.yml
 _config.local.yml
 **/config.private.*
+.vscode/
