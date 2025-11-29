@@ -398,7 +398,6 @@ echo 'com.apple.TextEdit   com.microsoft.word.doc all' | duti
 # Settings for duti 
 # ==========================================
 # Target App: com.google.antigravity
-# Generated from user screenshots
 # ==========================================
 
 # --- 纯文本与日志 ---
