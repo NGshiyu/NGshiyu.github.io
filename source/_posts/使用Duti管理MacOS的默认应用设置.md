@@ -23,6 +23,8 @@ brew install duti
 
 ## 使用 `duti` 的前置便利设置
 
+| Tip: 在 `.zshrc` 配置完成之后，记得使用 `source ~/.zshrc` 生效配置
+
 ### 在 `.zshrc` 中配置获取应用 `bundleId` 的快捷操作
 
 > 该脚本可以遍历MacOS中的应用，找到匹配的应用并输出其 `bundleId`。**支持前缀模糊查询**，例如输入 `getBundleID "Microsoft Word"` 可以找到 Microsoft Word 的 `bundleId`。输入 `getBundleID Chat` 可以给出一个带序号的可选择列表，获取对应选项的 `bundleId`。
@@ -159,6 +161,8 @@ getBundleID() {
 > )
 > kMDItemKind            = "JSON Document"
 > ```
+
+#### 命令行
 
 ```shell
 alias getuti="mdls -name kMDItemContentType -name kMDItemContentTypeTree -name kMDItemKind "
@@ -376,7 +380,7 @@ Andrew Mortensen               _DUTI_BUILD_DATE                        duti(1)
 ### 命令行
 
 ```shell
-# 使用 getuti 获取word文件的uti 
+# 使用 getuti 获取word文件的uti
 # 使用 getBundleID 获取word应用的bundleId
 # 执行配置命令
 
