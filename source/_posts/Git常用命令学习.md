@@ -32,6 +32,10 @@ date: 2025-11-18 14:15:18
 
 - Git 切换分支
 
+### git fetch [branchName]
+
+- Git 下载最新代码（一般有upstream的时候使用）
+
 ### git merge [branchName]
 
 - 将[branchName]分支内容合并到当前所在分支
