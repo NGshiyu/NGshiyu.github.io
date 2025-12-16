@@ -56,6 +56,15 @@ date: 2025-11-18 14:15:18
 > 移动以后会使得两个分支的功能看起来像是按顺序开发，但实际上它们是并行开发的。
 > 原本的 branchName 分支上的提交记录<font color="#error">依然存在</font> ，而当前分支的提交是我们 <font color="#error">Rebase</font> 到 <font color="#error">master</font> 分支上的 <font color="#error">提交记录的副本</font>
 
+#### 效果展示
+
+1. 在 `test_rebase` 分支提交 `commit`：`test_rebase_1`、`test_rebase_2`、`test_rebase_3`、`test_rebase_4`
+2. 切回 `main`,执行 `git rebase test_rebase` 变基并更新 `refs/heads/main` ，`push` main分支
+3. 生成的提交记录如图（线性）![img.png](../images/doc_images/rebase.png)
+4. 在 `test_merge` 分支提交 `commit`：`test_merge_1`、`test_merge_2`、`test_merge_3`、`test_merge_4`
+5. 切回 `main`,执行 `git merge test_merge` ，进入 `vim` 界面，输入本次合并的信息并保存，`push` main分支 
+6. 生成的提交记录如图（合并）![img.png](../images/doc_images/merge.png)
+
 ### 查看git用户名和邮箱地址命令
 
 - git config user.name
@@ -284,7 +293,7 @@ ssh-keygen -t rsa -C "Github_SSH_Key_MateBookWork"
 
 > 这个错误的意思权限不够,使用config配置文件解决  
 > 查看ssh连接状态  
-> ![查看ssh连接状态.png](./picture/查看ssh连接状态.png)
+> ![查看ssh连接状态.png](../images/doc_images/查看ssh连接状态.png)
 
 ```bash
 # 查看ssh连接状态的步骤
