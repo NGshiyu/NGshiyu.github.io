@@ -23,9 +23,10 @@ date: 2025-11-18 14:15:18
 
 - 提交当前的文件到临时仓库
 
-### git checkout -b [branchName]
+### git checkout -b [branchName]  [sourceBranchName]
 
 - Git 创建并且切换到分支
+- `sourceBranchName` 不为空的时候可以指定源代码分支
 
 ### git checkout [branchName]
 
