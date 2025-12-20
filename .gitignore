@@ -13,6 +13,7 @@ CLAUDE.md
 
 # 环境变量和敏感配置文件
 .env
+.envrc
 .env.local
 .env.production
 .env.development
