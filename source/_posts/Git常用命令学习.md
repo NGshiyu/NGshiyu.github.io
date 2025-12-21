@@ -3,8 +3,9 @@ title: Git常用命令学习
 categories:
   - [学习笔记]
   - [速查手册]
-  - [开发工具]
+  - [开发工具,版本控制系统 (VCS),Git]
 tags:
+  - 版本控制系统 (VCS)
   - Git
   - 速查手册
 published: true

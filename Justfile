@@ -2,15 +2,15 @@
 export PATH := join(justfile_directory(), "node_modules", "bin") + ":" + env_var('PATH')
 
 build:
-  npx hexo generate --dev
+  npx hexo generate --draft --dev
 clean:
   npx hexo clean
 server:
-  npx hexo server
+  npx hexo server --draft --dev
 run:
-  npx hexo clean && npx hexo generate --dev && npx hexo server --dev
+  npx hexo clean && npx hexo generate --draft --dev && npx hexo server --draft --dev
 all:
-  npx hexo clean && npx hexo generate --dev
+  npx hexo clean && npx hexo generate --draft --dev
 push comment:
   git pull && git add . && git commit -S -m "{{comment}}" && git push
 

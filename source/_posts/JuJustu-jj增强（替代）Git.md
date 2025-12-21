@@ -3,11 +3,11 @@ title: JuJustu-jj增强（替代）Git
 categories:
   - [学习笔记]
   - [速查手册]
-  - [开发工具]
+  - [开发工具,版本控制系统 (VCS),Jujustu]
 tags:
-  - Git
-  - Jujustu
+  - 版本控制系统 (VCS)
   - 速查手册
+  - Jujustu
 published: false
 date: 2025-12-19 13:47:42
 ---

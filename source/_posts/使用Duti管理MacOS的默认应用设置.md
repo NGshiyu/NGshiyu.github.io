@@ -2,7 +2,7 @@
 title: 使用Duti管理MacOS的默认应用设置
 categories:
   - [速查手册]
-  - [实用工具]
+  - [实用工具,MacOS]
 tags:
   - MacOS
   - 速查手册
