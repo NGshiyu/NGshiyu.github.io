@@ -8,12 +8,12 @@ tags:
   - Git
   - Jujustu
   - 速查手册
-published: true
+published: false
 date: 2025-12-19 13:47:42
 ---
 {% githubrepo 'jj-vcs/jj' %}
 
-{% githubrepo 'NGshiyu/java_study' %}
+{% githubrepo 'NGshiyu/NGshiyu.github.io' %}
 
 # [Jujustu 简介](https://docs.jj-vcs.dev/latest/tutorial/)
 
