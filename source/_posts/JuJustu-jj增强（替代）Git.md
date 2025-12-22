@@ -343,15 +343,39 @@ Jujustu提交代码需要先创建一个提交堆栈，只有当需要将堆栈�
 
 ## 一些其他的常用命令
 
-### jj git push
+### jj restore --from [change id]
+
+把 [change id] 的内容抽取到当前的 [working copy] 中
+```shell
+❯ jj log     
+@  zyqrwzzu xxxx@xxx.com 2025-12-22 12:56:08 537c5a4c
+│  (empty) (no description set)
+◆  vzomzyqu xxxx@xxx.com 2025-12-22 12:56:05 main git_head() 12515bfc
+│  jj git init with shell & vim init
+~  (elided revisions)
+│ ○  plkvtsss xxxx@xxx.com 2025-12-22 12:48:55 3b21e64c
+├─╯  Vim系统性学习
+◆  zykxwpsu xxxx@xxx.com 2025-12-21 15:07:08 59daa365
+│  category and tags
+~
+
+> jj restore --from plkvtsss # 抽取change id为 `plkvtsss` 的内容到当前的目录中，不支持批量，可以多次执行提取多个 change id
+
+> jj new plk zs zy -m "temp_collect" # 假设你想抽取 plk, zs, zy 的内容，使用这三个创建一个临时节点，直接提取这个临时节点即可
+
+> # 将 ID1, ID2, ID3 的改动全部压入当前节点
+> jj squash --from <ID_1> --into @
+> jj squash --from <ID_2> --into @
+> jj squash --from <ID_3> --into @
+```
 
 ### jj undo
 
-将仓库的状态完全回滚到上一个jj命令执行之前的状态。
+将仓库的状态完全回滚到上一个 `jj` 命令执行之前的状态。
 
 ### jj abandon
 
-如果你已经在新的 change 中（jj new 会自动把工作副本切换到新创建的 change），你可以直接“放弃”当前的这个空 change。删除当前的 change，并将工作副本（Working Copy）自动切回到它的父节点（即你执行 `jj new` 之前的那个位置）。
+如果你已经在新的 change 中（`jj new` 会自动把工作副本切换到新创建的 change），你可以直接“放弃”当前的这个空 change。删除当前的 change，并将工作副本（Working Copy）自动切回到它的父节点（即你执行 `jj new` 之前的那个位置）。
 
 ### jj edit [revsets]
 ```shell
