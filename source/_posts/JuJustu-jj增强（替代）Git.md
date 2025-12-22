@@ -80,7 +80,9 @@ Added 52 files, modified 0 files, removed 0 files
 Hint: Running `git clean -xdf` will remove `.jj/`!
 ```
 
-### jj init  (在本地已有的git仓库里集成jj)  （later）
+### jj git init  (在本地已有的git仓库里集成jj)
+
+jj git init
 
 ### jj st (jj status)
 
